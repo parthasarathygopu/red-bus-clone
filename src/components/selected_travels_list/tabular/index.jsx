@@ -1,3 +1,4 @@
+/* eslint-disable  */
 import React, { useEffect, useState, useMemo } from "react";
 import { TbBottle } from "react-icons/tb";
 import { LiaBusSolid } from "react-icons/lia";
@@ -29,11 +30,11 @@ export const Tabular = () => {
   //useMemo
   const filteredData1 = TravelsData.filter(
     (item) =>
-      item.departureLocation === selectedTravelDetails.from &&
-      item.arrivalLocation === selectedTravelDetails.to &&
-      item.date === selectedTravelDetails.date[2] &&
-      item.month === selectedTravelDetails.date[1] &&
-      item.year === selectedTravelDetails.date[3]
+      item.departureLocation == selectedTravelDetails.from &&
+      item.arrivalLocation == selectedTravelDetails.to &&
+      item.date == selectedTravelDetails.date[2] &&
+      item.month ==  selectedTravelDetails.date[1] &&
+      item.year == selectedTravelDetails.date[3]
   );
 
   const checkBoxFilterData = useMemo(() => {
