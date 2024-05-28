@@ -29,11 +29,11 @@ export const Tabular = () => {
   //useMemo
   const filteredData1 = TravelsData.filter(
     (item) =>
-      item.departureLocation == selectedTravelDetails.from &&
-      item.arrivalLocation == selectedTravelDetails.to &&
-      item.date == selectedTravelDetails.date[2] &&
-      item.month == selectedTravelDetails.date[1] &&
-      item.year == selectedTravelDetails.date[3]
+      item.departureLocation === selectedTravelDetails.from &&
+      item.arrivalLocation === selectedTravelDetails.to &&
+      item.date === selectedTravelDetails.date[2] &&
+      item.month === selectedTravelDetails.date[1] &&
+      item.year === selectedTravelDetails.date[3]
   );
 
   const checkBoxFilterData = useMemo(() => {
@@ -141,10 +141,11 @@ export const Tabular = () => {
     } else {
       setFilteredData2(filteredData1);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [checkBoxFilter]);
 
   console.log("checkBoxFilter in tabular: ", checkBoxFilter);
-  console.log("filteredData2: ", filteredData2);
+  console.log("filteredData2: ", filteredData2, checkBoxFilterData);
   return (
     <>
       <div className="tabular">

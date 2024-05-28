@@ -19,7 +19,7 @@ export const SelectedTravelsList = () => {
   const { from, to, date } = userStore((state) => state.selectedTravelDetails);
   const addCheckBoxFilter = userStore((state) => state.addCheckBoxFilter);
   const navigate = useNavigate();
-
+  console.log(checkBoxFilterId);
   //Ref
   const handleFilterChange = (e) => {
     console.log(`checked = ${e.target.checked}`);

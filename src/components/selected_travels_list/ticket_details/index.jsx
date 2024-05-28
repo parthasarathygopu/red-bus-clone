@@ -22,7 +22,6 @@ export const TicketDetails = ({ dataList, totalFare, setErrorMessage }) => {
     } else {
       setErrorMessage(false);
     }
-    const key = "updatable";
     if (
       Object.keys(userData).length === 2 &&
       phno &&

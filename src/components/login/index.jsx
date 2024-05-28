@@ -13,8 +13,6 @@ export const Login = () => {
   const [phno, setPhno] = useState(phnoStore || "");
   const navigate = useNavigate();
 
-  console.log("phno ", phno);
-  const key = "updatable";
   const handleInputValue = (e) => {
     let value = e.target.value;
     setPhno(value);
